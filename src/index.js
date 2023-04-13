@@ -4,13 +4,12 @@ import react from "react";
 import { ReactDOM } from "react";
 import { BrowserRouter } from "react-router-dom";
 
-const BasicComponentNameHere = () => {
+const MainComponent = () => {
   return (
     <div>
       {" "}
       <p>Hello World!</p>
       <BrowserRouter>
-        <App />
         <App />
       </BrowserRouter>
     </div>
@@ -19,4 +18,4 @@ const BasicComponentNameHere = () => {
 
 const appElement = document.getElementById("app");
 const root = createRoot(appElement);
-root.render(<BasicComponentNameHere />);
+root.render(<MainComponent />);
