@@ -6,19 +6,37 @@ body {
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
 }
 
 .puppyCard {
   display: flex;
+
   flex: 1 0 21%;
   border: 1px solid rgb(209, 209, 209);
-  border-radius: 10%;
+
   margin: 20px 20px;
 }
 
 .allPups {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.textInfo {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+button {
+  display: block;
+  margin-top: 2px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
 }

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import fetchDogs from "../puppies";
 import { useNavigate } from "react-router-dom";
+import { deletePup } from "../puppies";
 
 const AllPlayers = () => {
   const navigate = useNavigate();
@@ -22,20 +23,30 @@ const AllPlayers = () => {
 
   return (
     <div>
-      <p>This form will show all players</p>
       <div className="allPups">
         {dogs.map((dog) => {
           return (
             <div className="puppyCard">
               <img src={dog.imageUrl} />
-              <p
-                key={dog.id}
-                onClick={() => {
-                  navigate(`/${dog.id}`);
-                }}
-              >
-                {dog.name}
-              </p>
+              <div className="textInfo">
+                <p>{dog.name}</p>
+
+                <button
+                  key={dog.id}
+                  onClick={() => {
+                    navigate(`/${dog.id}`);
+                  }}
+                >
+                  See Details
+                </button>
+                <button
+                  onClick={async (e) => {
+                    const deleteDog = await deletePup();
+                  }}
+                >
+                  Delete From Roster
+                </button>
+              </div>
             </div>
           );
         })}

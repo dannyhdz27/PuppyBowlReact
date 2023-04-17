@@ -20,11 +20,11 @@ const SinglePlayer = () => {
     <div>
       {dog && (
         <ul>
+          <li>ID: {dog.data.player.id}</li>
           <li>Name: {dog.data.player.name}</li>
           <li>Breed: {dog.data.player.breed}</li>
         </ul>
       )}
-      <p>This form will show a Single player</p>
     </div>
   );
 };

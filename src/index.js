@@ -8,7 +8,6 @@ const MainComponent = () => {
   return (
     <div>
       {" "}
-      <p>Hello World!</p>
       <BrowserRouter>
         <App />
       </BrowserRouter>
